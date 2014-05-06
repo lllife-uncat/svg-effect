@@ -1,55 +1,26 @@
 <html>
+
     <head>
         <link rel="stylesheet" href="css/style.css">
-        <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+<!--         <link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'> -->
         <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+<!--         <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'> -->
+        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans' rel='stylesheet' type='text/css'>
+        <script src="vendors/angular/angular.js"></script>
+        <script src="js/main.js"></script>
     </head>
-    <body>
 
-        <div class="box">
-            <img class="jw-image" src="images/jw.jpg" alt="">
-            <h3>JW 1</h3>
-            <span>JW gets some practice with GMM Grammy Official for her first Thai single soon. Keep calm and stay tuned!</span>
+    <body ng-app="SvgEffect" ng-controller="MainController">
 
-            <svg xmlns="http://www.32.org/2000/svg" width="100%" height="100%">
-                <line class="top" x1="0" y1="0" x2="900" y2="0"></line>
-                <line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
-                <line class="bottom" x1="300" y1="400" x2="-600" y2="400"></line>
-                <line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
-            </svg>
-        </div>
+        <div class="box" ng-repeat="single in singles">
+            <img class="jw-image" ng-src="{{single.jw_artwork_url}}" alt="">
 
-        <div class="box">
-            <img class="jw-image" src="images/jw.jpg" alt="">
-            <h3>JW 2</h3>
-            <span>JW gets some practice with GMM Grammy Official for her first Thai single soon. Keep calm and stay tuned!</span>
+            <div class="jw-text">
+                <h3>{{$index + 1}}</h3>
+                <span>{{single.title}}</span>
+                <span>{{single.jw_created_at | date: date: "MMMM dd yyyy" }}</span>
+            </div>
 
-            <svg xmlns="http://www.32.org/2000/svg" width="100%" height="100%">
-                <line class="top" x1="0" y1="0" x2="900" y2="0"></line>
-                <line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
-                <line class="bottom" x1="300" y1="400" x2="-600" y2="400"></line>
-                <line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
-            </svg>
-        </div>
-
-        <div class="box">
-            <img class="jw-image" src="images/jw.jpg" alt="">
-            <h3>JW 3</h3>
-            <span>JW gets some practice with GMM Grammy Official for her first Thai single soon. Keep calm and stay tuned!</span>
-
-            <svg xmlns="http://www.32.org/2000/svg" width="100%" height="100%">
-                <line class="top" x1="0" y1="0" x2="900" y2="0"></line>
-                <line class="left" x1="0" y1="460" x2="0" y2="-920"></line>
-                <line class="bottom" x1="300" y1="400" x2="-600" y2="400"></line>
-                <line class="right" x1="300" y1="0" x2="300" y2="1380"></line>
-            </svg>
-        </div>
-
-        <div class="box">
-            <img class="jw-image" src="images/jw.jpg" alt="">
-            <h3>JW 4</h3>
-            <span>JW gets some practice with GMM Grammy Official for her first Thai single soon. Keep calm and stay tuned!</span>
 
             <svg xmlns="http://www.32.org/2000/svg" width="100%" height="100%">
                 <line class="top" x1="0" y1="0" x2="900" y2="0"></line>

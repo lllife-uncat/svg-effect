@@ -1,0 +1,16 @@
+{
+  "name": "svg-effect",
+  "version": "0.0.0",
+  "homepage": "https://github.com/somnuk-wk/svg-effect",
+  "authors": [
+    "Somnuk Wongkhan <somnuk.wk@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
